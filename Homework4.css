@@ -1,0 +1,128 @@
+/*-------- Set borders on the tables --------------------------*/
+table 	{border-collapse:collapse;
+    
+    border:5px solid red;
+    
+    width:34%;
+    
+    float:right;
+    
+    font-family:Arial,"sans-serif";
+    
+    color:green;
+    
+    font-weight:bold;
+    
+    font-style:italic;
+    
+    text-align:left;
+    
+    font-size:11px;
+    
+    }
+
+
+.vertical th:first-of-type { border-right: thin solid; }
+
+body {
+    background-color: rgb(126, 138, 138);
+    color: azure;
+    font-size: 1.1em;
+}
+h1 {
+    color: coral;
+}
+#intro {
+    font-size: 1.3em;
+}
+.colorful {
+    color: orange;
+}
+
+/*------- SELECTORS --------------------------------------------*/
+/* By element tag */
+caption { font-style: italic; }
+
+/* By class attribute */
+.horizontal { color: blue; }
+
+/* By id attribute */
+#pennsy { border: thick solid darkred; }
+
+/* By ancestor */
+div ul { color: green; }
+
+/* By parent */
+div > ul { color: red; }
+
+/* By sibling */
+th + td { color: orange; }
+
+/* Pseudo-classes */
+li:first-child { color: purple; }
+td:nth-of-type(4) { color: darkred; }
+
+/*------------------- Dynamic dropdown menu ---------------------*/
+.swimparent { 
+    /* Not a list */
+    display: inline; 
+    list-style-type: none;
+    padding-left: 0;
+}
+.swimparent > li { 
+    /* Not a list */
+    display: inline;
+    /* Allow this element to be used for positioning */ 
+    position: relative;
+}
+
+/* Menu is hidden by default */
+.swimparent .menu { display: none; }
+
+/* This is the actual menu */
+.swimparent ul {
+    /* So it appears just below and to the right of the menuparent */ 
+    position: absolute; 
+    top: 2.1ex;
+    left: -2em;
+    /* This isn't a *real* list */
+    list-style-type: none;
+}
+
+/* Menu items */
+.swim > li { 
+    /* Mark off the items from each other */
+    border: thin solid black;
+    /* Remove the coloring from the other parts of the stylesheet */
+    color: inherit;
+    /* Make the menu items obscure anything they cover */
+    background-color: skyblue;
+    /* Make the items a little less cramped-looking */
+    padding: .1em;
+}
+
+/* When the mouse hovers over the menuparent, show the menu */
+.swimparent:hover .menu { display: inherit; }
+/* When the mouse passes over a menu item, give it a blue background */
+.swim > li:hover { background-color: white; }
+
+/* --------------------- FONTS ------------------------------*/
+
+.vertical tr:first-of-type {
+    font-family: Arial, Helvetica, sans-serif
+}
+.vertical tr:nth-of-type(2) > td:first-child { 
+    font-family: "Gill Sans MT", sans-serif;  
+
+
+}
+.vertical tr:nth-of-type(4) > td:first-child { 
+    font-family: "French Script MT", cursive; 
+}
+.vertical tr:nth-of-type(3) > td:nth-last-of-type(2) {
+    /* Use dings with care! */
+    font-family: "Webdings", fantasy;
+}
+.vertical td:last-child { 
+    font-family: "Courier New", monospace; 
+}
