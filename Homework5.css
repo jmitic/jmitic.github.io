@@ -1,0 +1,75 @@
+.outline { list-style-type: upper-roman; }
+.outline > li > ol { list-style-type: lower-alpha; }
+.outline > li > ol > li > ol { list-style-type: decimal; }
+.outline > li > ol > li > ol > li > ol { list-style-type: lower-roman; }
+
+
+.no-markers { 
+    list-style-type: circle;
+}
+.no-markers {
+    padding-left: 5;
+    margin: 0;
+}
+
+.outline > li:nth-of-type(3) > ol > li:first-child  {
+    /* Borders can be specified per side */
+    border-bottom: double;
+    border-top: double;
+    border-left: dotted;
+    border-right: dotted;
+    padding: 1ex 0.5em; /* top/bottom left/right */
+    margin: 2ex 1em;
+    background-color: plum;
+    border-radius: 1ex 0.5em;
+}
+
+.no-markers {
+
+    border: 1px solid #000;
+    padding: 1ex 0.5em; /* top/bottom left/right */
+    margin: 2ex 1em;
+    background-color: gold;
+    border-radius: 1ex 0.5em;
+}
+
+/*-------- Set borders on the tables --------------------------*/
+table      { border: outset 10pt; 
+    border-collapse: separate;
+    border-spacing: 15pt }
+
+
+/* Double right border on header cells in a horizontal table */
+.horizontal th { border-right: double; }
+
+/* thin solid border below each row... */
+tr { border-bottom: thin solid; } 
+/* except the last */
+tr:last-of-type { border-bottom: none; } 
+/* thin solid right border on every td... */
+td { border-right: thin solid; }
+/* except the last on each row */
+td:last-of-type { border-right: none; }
+
+/*------- SELECTORS --------------------------------------------*/
+/* By element tag */
+caption { font-style: italic; }
+
+/* By class attribute */
+.horizontal { color: gold; }
+
+/* By id attribute */
+#pennsy { border: thick solid darkred; }
+
+/* By ancestor */
+div ul { color: black; }
+
+/* By parent */
+div > ul { color: red; }
+
+/* By sibling */
+th + td { color: powderblue; }
+
+/* Pseudo-classes */
+li:first-child { color: green; }
+td:nth-of-type(7) { color: darkred; }
