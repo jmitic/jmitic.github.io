@@ -8,7 +8,7 @@
     list-style-type: circle;
 }
 .no-markers {
-    padding-left: 5;
+    padding-left: 5px;
     margin: 0;
 }
 
