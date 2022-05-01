@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM demo, CSC 235</title>
+        <link rel="stylesheet" href="Homework10.css" />
+        <script src="Homework10.js"></script>
+    </head>
+        <h1>Homework10</h1>
+        <div id="remove_replace">
+            <form><select name="course" onchange="setCourse(this);">
+            <p><span id='chosen_course'>Choose a course</span></p>
+                <option value="">&mdash;Select a course that sounds interesting&mdash;</option>
+                <option>American Government</option>
+                <option>Biology</option>
+                <option>Biomathematics</option>
+                <option>Calculus I</option>
+                <option>Chemistry</option>
+                <option>Data Structures</option>
+                <option>English</option>
+                <option>Finite Math</option>
+                <option>German</option>
+                <option>Spanish</option>
+            </select></form>
+            <h3>Removing a single node</h3>
+            <form><select name="course" onchange="removeCourse(this);">
+                <option value="">&mdash;Select a course you want to replace&mdash;</option>
+                <option>American Government</option>
+                <option>Biology</option>
+                <option>Biomathematics</option>
+                <option>Calculus I</option>
+                <option>Chemistry</option>
+                <option>Data Structures</option>
+                <option>English</option>
+                <option>Finite Math</option>
+                <option>German</option>
+                <option>Spanish</option>
+            </select></form>
+            <h3>Replacing a single node</h3>
+            <form><label>Change <select name="course">
+                <option value="">&mdash;Select a nationality&mdash;</option>
+                <option>American Government</option>
+                <option>Biology</option>
+                <option>Biomathematics</option>
+                <option>Calculus I</option>
+                <option>Chemistry</option>
+                <option>Data Structures</option>
+                <option>English</option>
+                <option>Finite Math</option>
+                <option>German</option>
+                <option>Spanish</option>
+            </select> to <input type="text" name="newCourse" />
+            <button type="button"
+                onclick="changeCourse(this.form);">Make the change!</button>
+        </label></form>
+        </div>  
+    </body>
+</html>
+
+
